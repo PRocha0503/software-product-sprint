@@ -13,30 +13,43 @@
 		<script src="script.js"></script>
 	</head>
 	<body>
-		<div class="content">
-			<h1 class="title">
-				<spam style="color: blue">P</spam>
-				<spam style="color: red">O</spam>
-				<spam style="color: yellow">R</spam>
-				<spam style="color: blue">T</spam>
-				<spam style="color: green">A</spam>
-				<spam style="color: red">F</spam>
-				<spam style="color: blue">O</spam>
-				<spam style="color: red">L</spam>
-				<spam style="color: yellow">I</spam>
-				<spam style="color: blue">O</spam>
-			</h1>
-			<div id="searchBar">
-				<img src="./assets/searchIcon.png" id="searchIcon" alt="Search" />
-				<h1 id="name">pablo rocha</h1>
+		<div class="root">
+			<div class="fullHeight">
+				<h1 class="title">
+					<spam style="color: blue">P</spam>
+					<spam style="color: red">O</spam>
+					<spam style="color: yellow">R</spam>
+					<spam style="color: blue">T</spam>
+					<spam style="color: green">A</spam>
+					<spam style="color: red">F</spam>
+					<spam style="color: blue">O</spam>
+					<spam style="color: red">L</spam>
+					<spam style="color: yellow">I</spam>
+					<spam style="color: blue">O</spam>
+				</h1>
+				<div id="searchBarContainer">
+					<div id="searchBar">
+						<img src="./assets/searchIcon.png" id="searchIcon" alt="Search" />
+						<div class="nameContainer">
+							<h1 id="name">pablo rocha</h1>
+						</div>
+					</div>
+					<button id="feelingLucky" href="#name" onclick="addRandomGreeting()">
+						Get a fun fact
+					</button>
+				</div>
 			</div>
-			<p>This is my portfolio.</p>
-			<p>
-				Click <a href="/hello">here</a> to see content created by server code.
-			</p>
-			<p>Click here to get a random message:</p>
-			<button onclick="addRandomGreeting()">Hello</button>
-			<div id="greeting-container"></div>
+			<div class="fullHeight">
+				<h1 class="linkTitle">-About Me</h1>
+				<div id="quoteContainer">
+					<img src="./assets//quote-.svg" class="quoteIcon" />
+					<div>
+						<h1 class="quote"><mark>“Dare to think!”</mark></h1>
+						<h1 class="quote"><mark>-Emanuel Kant</mark></h1>
+					</div>
+				</div>
+				<p>dedeeeeeeeeeeeeeeeeeeeeeee</p>
+			</div>
 		</div>
 	</body>
 </html>

@@ -1,34 +1,178 @@
-.content {
+* {
+	font-family: "Lexend Deca", sans-serif;
+}
+
+.root {
 	width: 80vw;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 10vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 }
 .title {
 	font-size: clamp(0.5rem, 3vw + 2rem, 5rem);
 	font-family: "Lexend Deca", sans-serif;
 }
+
+.fullHeight {
+	height: 90vh;
+	width: 100%;
+}
+#searchBarContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+}
+
 #searchBar {
-	width: 90%;
+	width: 60%;
 	border: 1px solid black;
 	height: 10vh;
 	border-radius: 40px;
 	display: flex;
 	align-items: center;
 	padding-left: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 #searchIcon {
 	height: 7vh;
 }
 #name {
 	font-weight: 100;
-	font-size: 5vh;
+	font-size: 2rem;
 	font-family: "Lexend Deca", sans-serif;
+	overflow: hidden;
+	border-right: 0.15em solid blue;
+	width: 0;
+	animation: typing 2s forwards;
 }
-#greeting-container {
-	margin-top: 20px;
+.effect {
+	animation: typing 2s forwards;
+}
+
+.nameContainer {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+#feelingLucky {
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#feelingLucky:hover {
+	background-color: rgb(147, 144, 144);
+}
+
+/* .infoContainer {
+	margin-top: 20vh;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+.index {
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: 80%;
+	height: 100%;
+}
+.summary {
+	grid-row-start: 3;
+	grid-row-end: -1;
+	width: 100%;
+	border: 1px solid rgb(197, 195, 195);
+	border-radius: 15px;
+} */
+/* .mePhoto {
+	width: 100%;
+	border-radius: 15px;
+} */
+
+.linkTitle {
+	font-weight: 200;
+	font-size: clamp(0.5rem, 1.5vw + 0.7rem, 1.7rem);
+	color: blue;
+	cursor: pointer;
+}
+#quoteContainer {
+	width: 100%;
+	height: 20rem;
+	display: flex;
+	justify-content: center;
+	/* flex-direction: column; */
+	align-items: center;
+}
+mark {
+	background-color: red;
+	color: white;
+}
+.quote {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: clamp(0.5rem, 12vw + 1.2rem, 3.3rem);
+	position: relative;
+}
+
+.quoteIcon {
+	width: 14rem;
+}
+h2 {
+	font-weight: 300;
+	font-size: clamp(0.5rem, 1.5vw + 1rem, 2rem);
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+h3 {
+	font-weight: 100;
+	font-size: clamp(0.5rem, 1.3vw + 0.2rem, 1.5rem);
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+p {
+	font-weight: 100;
+	font-size: clamp(0.5rem, 1.5vw + 0.2rem, 1rem);
+}
+.description {
+	font-weight: 100;
+	font-size: clamp(0.5rem, 1.5vw + 0.2rem, 3rem);
+}
+
+.sideInfo {
+	padding: 0.5rem;
+}
+
+#navBar {
+	margin-top: 0.5rem;
+	display: flex;
+	width: 70%;
+	justify-content: space-around;
+	border-bottom: 1px solid rgb(188, 186, 186);
+}
+
+.navBarItem {
+	display: flex;
+	align-items: center;
+}
+
+.navBarText {
+	margin-left: 5px;
+}
+
+.divider {
+	width: 100%;
+	height: 0.2px;
+	background-color: rgb(197, 195, 195);
 }
