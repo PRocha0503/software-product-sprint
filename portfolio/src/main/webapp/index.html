@@ -5,16 +5,20 @@
 		<title>My Portfolio</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- To add another font -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- Script -->
 		<script src="script.js"></script>
 	</head>
 	<body>
+		<!-- Root of the page -->
 		<div class="root">
-			<div class="fullHeight">
+			<!-- Intro section -->
+			<div class="card">
 				<h1 class="title">
 					<spam style="color: blue">P</spam>
 					<spam style="color: red">O</spam>
@@ -27,6 +31,7 @@
 					<spam style="color: yellow">I</spam>
 					<spam style="color: blue">O</spam>
 				</h1>
+				<!-- Searchbar -->
 				<div id="searchBarContainer">
 					<div id="searchBar">
 						<img src="./assets/searchIcon.png" id="searchIcon" alt="Search" />
@@ -39,7 +44,10 @@
 					</button>
 				</div>
 			</div>
-			<div class="fullHeight">
+			<!-- Just a divider  -->
+			<div class="divider"></div>
+			<!-- About me section -->
+			<div class="card" style="background-color: blue">
 				<h1 class="linkTitle">-About Me</h1>
 				<div id="quoteContainer">
 					<img src="./assets//quote-.svg" class="quoteIcon" />
@@ -48,8 +56,20 @@
 						<h1 class="quote"><mark>-Emanuel Kant</mark></h1>
 					</div>
 				</div>
-				<p>dedeeeeeeeeeeeeeeeeeeeeeee</p>
+				<div class="description">
+					<p>
+						Hello! I am Pablo Rocha a second year in CS at Tecnológico de
+						Monterrey. I live in Mexico City and love mexican food. I enjoy
+						doing outdoor activities and going out to eat.
+					</p>
+				</div>
+				<div id="imageContainer">
+					<img src="./assets/pr.jpg" width="500px" />
+				</div>
 			</div>
+			<!-- Just a divider  -->
+			<div class="divider"></div>
+			<div class="card" style="background-color: red"></div>
 		</div>
 	</body>
 </html>
