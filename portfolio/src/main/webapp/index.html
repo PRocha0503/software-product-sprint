@@ -15,6 +15,13 @@
 		<script src="script.js"></script>
 	</head>
 	<body>
+		<!-- NavBar -->
+		<div id="navbar">
+			<a href="#aboutMe"><p>About me</p></a>
+			<a href="#educationGrid"><p>Education</p></a>
+			<p>Experience</p>
+			<p>Contact</p>
+		</div>
 		<!-- Root of the page -->
 		<div class="root">
 			<!-- Intro section -->
@@ -46,30 +53,60 @@
 			</div>
 			<!-- Just a divider  -->
 			<div class="divider"></div>
-			<!-- About me section -->
-			<div class="card" style="background-color: blue">
-				<h1 class="linkTitle">-About Me</h1>
-				<div id="quoteContainer">
-					<img src="./assets//quote-.svg" class="quoteIcon" />
-					<div>
-						<h1 class="quote"><mark>“Dare to think!”</mark></h1>
-						<h1 class="quote"><mark>-Emanuel Kant</mark></h1>
-					</div>
-				</div>
-				<div class="description">
-					<p>
-						Hello! I am Pablo Rocha a second year in CS at Tecnológico de
-						Monterrey. I live in Mexico City and love mexican food. I enjoy
-						doing outdoor activities and going out to eat.
-					</p>
-				</div>
-				<div id="imageContainer">
-					<img src="./assets/pr.jpg" width="500px" />
+		</div>
+		<!-- About me section -->
+		<div id="aboutMe">
+			<h1 class="linkTitle">-About Me</h1>
+			<div id="quoteContainer">
+				<img src="./assets//quote-.svg" class="quoteIcon" />
+				<div>
+					<h1 class="quote"><mark>“Dare to think!”</mark></h1>
+					<h1 class="quote"><mark>-Emanuel Kant</mark></h1>
 				</div>
 			</div>
-			<!-- Just a divider  -->
-			<div class="divider"></div>
-			<div class="card" style="background-color: red"></div>
+			<div class="description">
+				<p>
+					Hello! I am Pablo Rocha a second year in CS at Tecnológico de
+					Monterrey. I live in Mexico City and love mexican food. I enjoy doing
+					outdoor activities and going out to eat.
+				</p>
+			</div>
+			<div id="imageContainer">
+				<img src="./assets/pr.jpg" width="500px" class="img" />
+			</div>
+		</div>
+
+		<!-- Just a divider  -->
+		<div class="divider"></div>
+		<h1 class="linkTitle" style="color: red">-Education</h1>
+		<div class="root">
+			<div id="educationGrid">
+				<div class="educationItem" id="tomasMoro">
+					<div class="shaded">
+						<p class="insideText">
+							Attended Tomás Moro highschool where I finished with a 9.1
+							average.
+						</p>
+					</div>
+				</div>
+				<div class="educationItem" id="tec">
+					<div class="shaded">
+						<p class="insideText">
+							In my second year at Tecnológico de Monterrey pursuing a degree in
+							Computer Science. I currently have an average of 9.8.
+						</p>
+					</div>
+				</div>
+				<div class="educationItem" id="online">
+					<div class="shaded">
+						<p class="insideText">
+							Have taken multiple online curses in udemy and coursea on CS
+							related topics like Python, Node, Flutter, Genomics,
+							Tensorflow,etc.
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
