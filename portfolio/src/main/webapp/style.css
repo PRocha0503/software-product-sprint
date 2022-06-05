@@ -1,9 +1,153 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/* CSS overwrite */
+* {
+	font-family: "Lexend Deca", sans-serif;
 }
 
-#greeting-container {
-  margin-top: 20px;
+h2 {
+	font-weight: 300;
+	font-size: clamp(0.5rem, 1.5vw + 1rem, 2rem);
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+h3 {
+	font-weight: 100;
+	font-size: clamp(0.5rem, 1.3vw + 0.2rem, 1.5rem);
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+p {
+	font-weight: 400;
+	font-size: clamp(0.5rem, 1.5vw + 0.6rem, 1.6rem);
+	color: white;
+	text-align: center;
+}
+/* Usefull content for all sections */
+.root {
+	width: 80vw;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.card {
+	min-height: 90vh;
+	width: 100%;
+	border-radius: 25px;
+	box-shadow: 10px 5px 30px black;
+	padding: 1rem;
+}
+
+.linkTitle {
+	font-weight: 200;
+	font-size: clamp(0.5rem, 1.5vw + 0.9rem, 1.9rem);
+	color: white;
+	cursor: pointer;
+}
+.divider {
+	margin-top: 8vh;
+}
+
+.description {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Intro section */
+.title {
+	font-size: clamp(0.5rem, 3vw + 1.8rem, 5rem);
+	font-family: "Lexend Deca", sans-serif;
+	margin-left: 3rem;
+}
+
+#searchBarContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 40vh;
+}
+
+#searchBar {
+	width: 60%;
+	border: 1px solid black;
+	height: 10vh;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#searchIcon {
+	height: 7vh;
+}
+#name {
+	font-weight: 100;
+	font-size: 2rem;
+	font-family: "Lexend Deca", sans-serif;
+	overflow: hidden;
+	border-right: 0.15em solid blue;
+	width: 0;
+	animation: typing 2s forwards;
+}
+.effect {
+	animation: typing 2s forwards;
+}
+
+.nameContainer {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+#feelingLucky {
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+#feelingLucky:hover {
+	background-color: rgb(147, 144, 144);
+}
+
+/* About me */
+#quoteContainer {
+	width: 70%;
+	height: 11rem;
+	display: flex;
+	justify-content: center;
+	/* flex-direction: column; */
+	align-items: center;
+}
+mark {
+	background-color: red;
+	color: white;
+}
+mark:hover {
+	background-color: yellow;
+}
+.quote {
+	font-size: clamp(0.5rem, 2vw + 1.2rem, 3.3rem);
+	position: relative;
+}
+
+.quoteIcon {
+	width: clamp(0.5rem, 8vw + 8rem, 14rem);
+}
+
+#imageContainer {
+	width: 80%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
 }
