@@ -29,7 +29,7 @@ function addRandomFact() {
  */
 const getRandomFact = async () => {
 	const serverFunFact = await fetch("/funFact");
-	console.log(serverFunFact);
+	console.log(serverFunFact.text());
 };
 
 /**
