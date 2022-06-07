@@ -13,15 +13,15 @@ function addRandomGreeting() {
 	];
 
 	// Pick a random fun fact
-	const greeting = funFacts[Math.floor(Math.random() * funFacts.length)];
+	const selectedFunFact = funFacts[Math.floor(Math.random() * funFacts.length)];
 
 	// Add it to the page.
-	const greetingContainer = document.getElementById("name");
-	greetingContainer.innerText = greeting;
+	const funFactContainer = document.getElementById("name");
+	funFactContainer.innerText = selectedFunFact;
 	//Make animation happen again
-	greetingContainer.style.animation = "none";
-	greetingContainer.offsetHeight;
-	greetingContainer.style.animation = null;
+	funFactContainer.style.animation = "none";
+	funFactContainer.offsetHeight;
+	funFactContainer.style.animation = null;
 }
 /**
  * Navigates to another url.
