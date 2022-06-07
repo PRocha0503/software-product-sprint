@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/funFact")
-public class FunFact extends HttpServlet {
+public class FunFactServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
