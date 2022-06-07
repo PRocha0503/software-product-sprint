@@ -1,7 +1,7 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
+function addRandomFact() {
 	//Possible fun facts
 	const funFacts = [
 		"Avocados are a fruit, not a vegetable.",
@@ -23,6 +23,15 @@ function addRandomGreeting() {
 	funFactContainer.offsetHeight;
 	funFactContainer.style.animation = null;
 }
+
+/**
+ * Gets a random fact from the server
+ */
+const getRandomFact = async () => {
+	const serverFunFact = await fetch("/funFact");
+	console.log(serverFunFact);
+};
+
 /**
  * Navigates to another url.
  */
