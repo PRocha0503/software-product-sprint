@@ -20,23 +20,14 @@
 			<a href="#aboutMe"><p>About me</p></a>
 			<a href="#educationGrid"><p>Education</p></a>
 			<p>Experience</p>
-			<p>Contact</p>
+			<a href="#contactMe"><p>Contact Me</p></a>
 		</div>
 		<!-- Root of the page -->
 		<div class="root">
 			<!-- Intro section -->
 			<div class="card">
 				<h1 class="title">
-					<spam style="color: blue">P</spam>
-					<spam style="color: red">O</spam>
-					<spam style="color: yellow">R</spam>
-					<spam style="color: blue">T</spam>
-					<spam style="color: green">A</spam>
-					<spam style="color: red">F</spam>
-					<spam style="color: blue">O</spam>
-					<spam style="color: red">L</spam>
-					<spam style="color: yellow">I</spam>
-					<spam style="color: blue">O</spam>
+					MY PORTAFOLIO
 				</h1>
 				<!-- Searchbar -->
 				<div id="searchBarContainer">
@@ -56,7 +47,7 @@
 		</div>
 		<!-- About me section -->
 		<div id="aboutMe">
-			<h1 class="linkTitle">-About Me</h1>
+			<h1 class="linkTitle"><span contenteditable="true">-About Me</span></h1>
 			<div id="quoteContainer">
 				<img src="./assets/quote.svg" class="quoteIcon" />
 				<div>
@@ -72,13 +63,13 @@
 				</p>
 			</div>
 			<div id="imageContainer">
-				<img src="./assets/pr.jpg" width="500px" class="img" />
+				<img src="./assets/pr_bw.png" width="400px" class="img" />
 			</div>
 		</div>
 
 		<!-- Just a divider  -->
 		<div class="divider"></div>
-		<h1 class="linkTitle" style="color: red">-Education</h1>
+		<h1 class="linkTitle"><span contenteditable="true">-Education</span></h1>
 		<div class="root">
 			<div id="educationGrid">
 				<div class="educationItem" id="tomasMoro">
@@ -108,12 +99,40 @@
 				</div>
 			</div>
 		</div>
-		<form action="/form-handler" method="POST">
-			<p>Enter some text here:</p>
-			<textarea name="text-input">hello world</textarea>
-			<br />
-			<input type="submit" />
-		</form>
-		<button onclick="getRandomFact()">Log FunFact</button>
+		<!-- Contact Me section -->
+		<div class="divider"></div>
+		<h1 class="linkTitle" id="contactMe"><span contenteditable="true">-Contact Me</span></h1>
+		<div class="root">
+			<p style="color: black">
+				If you are want to contact me please leave your email and reason here
+				and I will get back to you as soon as I can.
+			</p>
+			<div id="social">
+				<a href="https://github.com/PRocha0503">
+					<img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" width="100"/>
+				</a>
+				<a href="https://www.linkedin.com/in/pablo-rocha-078634213/">
+					<img src = "https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-noire.png" width="100"/>
+				</a>
+				<a href="mailto:pablorochatmm@gmail.com">
+					<img src = "http://cdn.onlinewebfonts.com/svg/img_262951.png" width="100"/>
+				</a>
+				
+				
+			</div>
+			<div class="form">
+				<form action="/form-handler" method="POST">
+					<label for="fname">Name</label><br>
+					<input type="text" id="fname" name="name"></input><br />
+					<label for="femail" >Email</label><br>
+					<input type="text" id="femail" name="email"></input><br />
+					<label for="freason">Reason</label><br>
+					<textarea type="text" id="freason" name="reason"></textarea><br />
+					<label for="fRecruiter">I am a Recruiter</label><br>
+					<input type="checkbox" id="fRecruiter" name="recruiter"></input><br />
+					<input type="submit" />
+				</form>
+			</div>
+		</div>
 	</body>
 </html>

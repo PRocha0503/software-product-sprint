@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.util.Random;
 
-/** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
 @WebServlet("/funFact")
 public class FunFactServlet extends HttpServlet {
 
+  //Returns a random fun fact
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     String[] funFacts = {"Avocados are a fruit, not a vegetable.",
@@ -20,7 +20,8 @@ public class FunFactServlet extends HttpServlet {
 		"Baby rabbits are called kits",
 		"The Easter Island heads have bodies.",
 		"Ketchup was once sold as medicine."};
-	Random generator = new Random();
+    // Generate a random number and acces it to the array
+	  Random generator = new Random();
     int randomIndex = generator.nextInt(funFacts.length);
     String selectedFact = funFacts[randomIndex];
     response.setContentType("text/plain");

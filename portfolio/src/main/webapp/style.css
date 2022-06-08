@@ -6,6 +6,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	background: #e0e0e0;
 	padding: 0px;
 	margin: 0px;
 }
@@ -27,12 +28,55 @@ a {
 }
 
 p {
-	font-weight: 200;
+	font-weight: 300;
 	font-size: clamp(0.5rem, 1.5vw + 0.6rem, 1.6rem);
-	color: white;
+
 	text-align: center;
 }
+span {
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	font-size: 4rem;
+	color: #e0e0e0;
+	text-shadow: 8px 8px 20px #808080, -8px -8px 20px #ffffff;
+}
 
+label {
+	font-size: clamp(0.5rem, 0.7vw + 0.5rem, 1.6rem);
+	margin: auto;
+}
+input[type="text"] {
+	border-radius: 10px;
+	border: 0.5px solid gray;
+	width: 100%;
+	min-height: 2rem;
+}
+input[type="checkbox"] {
+	margin: auto;
+	border-radius: 50%;
+	outline: none;
+	border: 1px solid #ddd;
+}
+input[type="submit"] {
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 20px 20px 60px #949494, -20px -20px 60px #ffffff;
+	border: 0px solid black;
+	margin: auto;
+	border-radius: 20px;
+	width: 60%;
+	min-height: 3rem;
+}
+form {
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+}
+textarea {
+	border-radius: 10px;
+	min-height: 8rem;
+}
 /* Navbar */
 
 #navbar {
@@ -60,13 +104,10 @@ p {
 .card {
 	min-height: 90vh;
 	width: 100%;
-	border-radius: 25px;
-	box-shadow: 10px 5px 30px black;
-	padding: 1rem;
 }
 
 .linkTitle {
-	font-weight: 6oo;
+	font-weight: 600;
 	font-size: clamp(0.5rem, 1.5vw + 0.9rem, 1.9rem);
 	color: white;
 	cursor: pointer;
@@ -85,7 +126,6 @@ p {
 /* Intro section */
 .title {
 	font-size: clamp(0.5rem, 3vw + 1.8rem, 5rem);
-	font-family: "Lexend Deca", sans-serif;
 	margin-left: 3rem;
 }
 
@@ -101,7 +141,9 @@ p {
 	width: 60%;
 	border: 1px solid black;
 	height: 10vh;
-	border-radius: 40px;
+	border-radius: 101px;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 20px 20px 39px #bebebe, -20px -20px 39px #ffffff;
 	display: flex;
 	align-items: center;
 	padding-left: 40px;
@@ -112,7 +154,7 @@ p {
 	height: 7vh;
 }
 #name {
-	font-weight: 100;
+	font-weight: 200;
 	font-size: 2rem;
 	font-family: "Lexend Deca", sans-serif;
 	overflow: hidden;
@@ -140,9 +182,11 @@ p {
 }
 
 #feelingLucky {
-	padding: 0.5rem;
+	padding: 1rem;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 0px solid black;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 20px 20px 39px #bebebe, -20px -20px 39px #ffffff;
 }
 
 #feelingLucky:hover {
@@ -151,7 +195,6 @@ p {
 
 /* About me */
 #aboutMe {
-	background-color: blue;
 	padding: 0.5rem;
 	padding-bottom: 2rem;
 }
@@ -164,8 +207,8 @@ p {
 	align-items: center;
 }
 mark {
-	background-color: red;
 	color: white;
+	background: #e04e10;
 }
 mark:hover {
 	background-color: yellow;
@@ -187,11 +230,14 @@ mark:hover {
 }
 
 .img {
-	box-shadow: 10px 10px 10px green;
+	position: relative;
+	top: -100px;
+	z-index: -1;
+	left: 100px;
 }
 /* Education */
 #educationGrid {
-	height: 45vh;
+	height: 35vh;
 	width: 100%;
 	margin-top: 7rem;
 	margin-bottom: 7rem;
@@ -201,17 +247,18 @@ mark:hover {
 	grid-gap: 30px;
 }
 .educationItem {
-	background-color: white;
 	border-radius: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 
 .shaded {
 	width: 70%;
 	height: 40%;
-	background-color: rgba(19, 4, 4, 0.438);
+
 	border-radius: 15px;
 	display: flex;
 	justify-content: center;
@@ -223,26 +270,41 @@ mark:hover {
 }
 
 #tomasMoro {
-	background: url(./assets/school.jpg);
-	background-size: 130% 130%;
-	background-position: center;
 }
 #tomasMoro:hover {
-	background-size: 100% 100%;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 #tec {
-	background: url(./assets/tec.jpg);
-	background-size: 100% 100%;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 #tec:hover {
-	background-position: center;
-	background-size: 130% 130%;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 #online {
-	background: url(./assets/udemy.png);
-	background-position: center;
-	background-size: 130% 130%;
 }
 #online:hover {
-	background-size: 100% 100%;
+	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+}
+
+/* Contact Me */
+
+.form {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 3vh;
+	min-height: 25vh;
+	border-radius: 1rem;
+}
+
+#social {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 2rem;
 }
