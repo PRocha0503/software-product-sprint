@@ -19,20 +19,4 @@ public final class ContactMe {
         this.recruiter = false;   
       }
   }
-
-  public String getName() {
-    return name;
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public String getReason() {
-    return reason;
-  }
-
-  public boolean getRecruiter() {
-    return recruiter;
-  }
 }

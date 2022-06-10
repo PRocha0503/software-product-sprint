@@ -43,8 +43,9 @@ public class FormHandlerServlet extends HttpServlet {
 
     //Read previous forms
     JSONArray contactList = readFile();
-    System.out.println(contactList);
+
     //Add new contact to list
+    System.out.println(jsonContactMe);
     contactList.add(jsonContactMe);
 
     //Write JSON file
@@ -55,10 +56,14 @@ public class FormHandlerServlet extends HttpServlet {
     } catch (IOException e) {
         e.printStackTrace();
     }
+    //Print all the contactList
+    System.out.println(contactList);
 
      // Send the JSON as the response
      response.setContentType("application/json;");
      response.getWriter().println(jsonContactMe);
+
+     
     //Redirect to main page
     response.sendRedirect("/");
   }
