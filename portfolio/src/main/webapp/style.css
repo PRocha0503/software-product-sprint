@@ -296,9 +296,11 @@ mark:hover {
 	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 
-#educationImg {
+.educationImg {
 	position: absolute;
 	z-index: -1;
+	top: -15rem;
+	left: -15rem;
 }
 
 /* Proyects */
