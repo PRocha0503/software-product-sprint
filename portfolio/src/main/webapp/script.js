@@ -26,6 +26,7 @@ const navigate = (url) => {
  */
 const getContacts = async () => {
 	const response = await fetch("/getContacts");
-	const contacts = await response.text();
+	const json = await response.text();
+	const contacts = JSON.parse(json);
 	console.log(contacts);
 };
