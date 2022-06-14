@@ -32,11 +32,13 @@ public class NewContact extends HttpServlet {
 
     //Check for nullity in rec
     if(recruiter == null) {
-      recruiter = "null";
+        recruiter = "false";
+    }else{
+        recruiter = "true";
     }
 
     // Convert the server stats to JSON
-    ContactMe contactMe = new ContactMe(name, email, reason, recruiter);
+    // ContactMe contactMe = new ContactMe(name, email, reason, recruiter);
     long timestamp = System.currentTimeMillis();
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
@@ -47,7 +49,7 @@ public class NewContact extends HttpServlet {
             .set("email", email)
             .set("reason", reason)
             .set("recruiter", recruiter)
-            .set("active",false)
+            .set("active",true)
             .set("timestamp", timestamp)
             .build();
     datastore.put(contactEntity);
