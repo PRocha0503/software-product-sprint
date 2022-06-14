@@ -12,6 +12,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Safelist;
 // import org.jsoup.Jsoup;
 // import org.jsoup.safety.Whitelist;
 
@@ -22,10 +25,10 @@ public class NewContact extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the value entered in the form.
-    String name = request.getParameter("name");
-    String email = request.getParameter("email");
-    String reason = request.getParameter("reason");
-    String recruiter = request.getParameter("recruiter");
+    String name = Jsoup.clean(request.getParameter("name"), Safelist.none());
+    String email = Jsoup.clean(request.getParameter("email"), Safelist.none());
+    String reason = Jsoup.clean(request.getParameter("reason"), Safelist.none());
+    String recruiter = Jsoup.clean(request.getParameter("recruiter"), Safelist.none());
 
     //Check for nullity in rec
     if(recruiter == null) {
