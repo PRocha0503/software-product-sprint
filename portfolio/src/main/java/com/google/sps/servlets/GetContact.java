@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /** Servlet responsible for listing tasks. */
-@WebServlet("/newContacts")
+@WebServlet("/getContacts")
 public class GetContact extends HttpServlet {
 
   @Override
@@ -36,7 +36,7 @@ public class GetContact extends HttpServlet {
       String name = entity.getString("name");
       String email = entity.getString("email");
       String reason = entity.getString("reason");
-      String recruiter = entity.getString("recruiter");
+      Boolean recruiter = entity.getBoolean("recruiter");
       ContactMe contact = new ContactMe(name, email, reason, recruiter);
       contacts.add(contact);
     }

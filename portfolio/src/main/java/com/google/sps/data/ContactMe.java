@@ -19,4 +19,10 @@ public final class ContactMe {
         this.recruiter = false;   
       }
   }
+  public ContactMe(String name, String email, String reason, Boolean recruiter) {
+    this.name = name;
+    this.email = email;
+    this.reason = reason;
+    this.recruiter = recruiter;
+  }
 }
