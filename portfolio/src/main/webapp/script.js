@@ -20,3 +20,12 @@ const getRandomFact = async () => {
 const navigate = (url) => {
 	window.location.href = url;
 };
+
+/**
+ * Get all contacts lists
+ */
+const getContacts = async () => {
+	const response = await fetch("/getContacts");
+	const contacts = await serverFunFact.text();
+	console.log(getContacts);
+};
