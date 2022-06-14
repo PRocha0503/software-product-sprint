@@ -19,7 +19,7 @@
 		<div id="navbar">
 			<a href="#aboutMe"><p>About me</p></a>
 			<a href="#educationGrid"><p>Education</p></a>
-			<p>Experience</p>
+			<a href="#proyectsSection"><p>Proyects</p></a>
 			<a href="#contactMe"><p>Contact Me</p></a>
 		</div>
 		<!-- Root of the page -->
@@ -69,36 +69,80 @@
 
 		<!-- Just a divider  -->
 		<div class="divider"></div>
-		<h1 class="linkTitle"><span contenteditable="true">-Education</span></h1>
-		<div class="root">
-			<div id="educationGrid">
-				<div class="educationItem" id="tomasMoro">
-					<div class="shaded">
-						<p class="insideText">
-							Attended Tomás Moro highschool where I finished with a 9.1
-							average.
-						</p>
+		<div id="educationSection">
+			<h1 class="linkTitle" ><span contenteditable="true" id="edTitle">-Education</span></h1>
+			<div class="root">
+				<div id="educationGrid">
+					<div class="educationItem" id="tomasMoro">
+						<div class="shaded">
+							<p class="insideText">
+								Attended Tomás Moro highschool where I finished with a 9.1
+								average.
+							</p>
+						</div>
 					</div>
-				</div>
-				<div class="educationItem" id="tec">
-					<div class="shaded">
-						<p class="insideText">
-							In my second year at Tecnológico de Monterrey pursuing a degree in
-							Computer Science. I currently have an average of 9.8.
-						</p>
+					<div class="educationItem" id="tec">
+						<div class="shaded">
+							<p class="insideText">
+								In my second year at Tecnológico de Monterrey pursuing a degree in
+								Computer Science. I currently have an average of 9.8.
+							</p>
+						</div>
+						<img src="./assets/sh.png" class="educationImg">
 					</div>
-				</div>
-				<div class="educationItem" id="online">
-					<div class="shaded">
-						<p class="insideText">
-							Have taken multiple online curses in udemy and coursea on CS
-							related topics like Python, Node, Flutter, Genomics,
-							Tensorflow,etc.
-						</p>
+					<div class="educationItem" id="online">
+						<div class="shaded">
+							<p class="insideText">
+								Have taken multiple online curses in udemy and coursea on CS
+								related topics like Python, Node, Flutter, Genomics,
+								Tensorflow,etc.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Proyects Section -->
+		<div class="divider"></div>
+		<div id="proyectsSection">
+			<h1 class="linkTitle" ><span contenteditable="true" >-Proyects</span></h1>
+			<div class="root">
+				<div class="item">
+					<div class="polaroid"><img src="./assets/Tegger.png">
+					  <div class="caption"><h1>Tegger New UI</h1></div>
+					  <div ><p class="desc">Was in charge of the new Tegger UI, developed all the tabs and all the components. </p></div>
+					</div>
+				  </div>
+				  <div class="item">
+					<div class="polaroid"><img src="./assets/fakeflix.png">
+					  <div class="caption"><h1>Fakeflix</h1></div>
+					  <div ><p class="desc">Did a recommendation software based on the KNN algorithm. The user rates movies and one another one is recommended. </p></div>
+					</div>
+				  </div>
+				  <div class="item">
+					<div class="polaroid"><img src="https://cdn.pixabay.com/photo/2018/07/14/11/33/earth-3537401__480.jpg">
+					  <div class="caption"><h1>IP analysis </h1></div>
+					  <div ><p class="desc">Used many sorting and search algorithms to analyze a document full of IPs. The objective was to
+						identify the Ip with more entries in the shortest time.</p></div>
+					</div>
+				  </div>
+				  <div class="item">
+					<div class="polaroid"><img src="./assets/f1bet.png">
+					  <div class="caption"><h1>Blockchain F1Bet</h1></div>
+					  <div ><p class="desc">Website and smart contract to bet on the Formula1 2022 Season. Players enter the
+						bet and when the season is over money automatically goes to the winner.</p></div>
+					</div>
+				  </div>
+				  <div class="item">
+					<div class="polaroid"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfRv6TOqBxd_04f_pfiha1HWU1zJgkcFCTYRq27zZvAJ-xab17ikx-_-AnoRZAI3tDhFY&usqp=CAU">
+					  <div class="caption"><h1>Admin Server</h1></div>
+					  <div ><p class="desc">Created the backend server for the administration page of Tegger. Admins could add products, see users, manage admins, depending on their admin permissions.</p></div>
+					</div>
+				  </div>
+
+			</div>
+		</div>
+
 		<!-- Contact Me section -->
 		<div class="divider"></div>
 		<h1 class="linkTitle" id="contactMe"><span contenteditable="true">-Contact Me</span></h1>

@@ -38,19 +38,20 @@ span {
 	top: 50%;
 	left: 50%;
 	font-size: 4rem;
-	color: #e0e0e0;
+	color: #474554;
 	text-shadow: 8px 8px 20px #808080, -8px -8px 20px #ffffff;
 }
 
 label {
 	font-size: clamp(0.5rem, 0.7vw + 0.5rem, 1.6rem);
-	margin: auto;
 }
 input[type="text"] {
 	border-radius: 10px;
 	border: 0.5px solid gray;
 	width: 100%;
 	min-height: 2rem;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 5px 5px 10px #7d7d7d, -5px -5px 10px #ffffff;
 }
 input[type="checkbox"] {
 	margin: auto;
@@ -59,7 +60,7 @@ input[type="checkbox"] {
 	border: 1px solid #ddd;
 }
 input[type="submit"] {
-	background: linear-gradient(145deg, #f0f0f0, #cacaca);
+	background: white;
 	box-shadow: 20px 20px 60px #949494, -20px -20px 60px #ffffff;
 	border: 0px solid black;
 	margin: auto;
@@ -76,6 +77,8 @@ form {
 textarea {
 	border-radius: 10px;
 	min-height: 8rem;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow: 5px 5px 10px #7d7d7d, -5px -5px 10px #ffffff;
 }
 /* Navbar */
 
@@ -156,7 +159,6 @@ textarea {
 #name {
 	font-weight: 200;
 	font-size: 2rem;
-	font-family: "Lexend Deca", sans-serif;
 	overflow: hidden;
 	border-right: 0.15em solid blue;
 	width: 0;
@@ -236,6 +238,9 @@ mark:hover {
 	left: 100px;
 }
 /* Education */
+#educationSection {
+	min-height: 90vh;
+}
 #educationGrid {
 	height: 35vh;
 	width: 100%;
@@ -276,6 +281,7 @@ mark:hover {
 	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 #tec {
+	position: relative;
 	background: linear-gradient(145deg, #f0f0f0, #cacaca);
 	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
@@ -290,10 +296,124 @@ mark:hover {
 	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
 }
 
+.educationImg {
+	position: absolute;
+	z-index: -1;
+	top: -15rem;
+	left: -15rem;
+}
+
+/* Proyects */
+#proyectsSection {
+	min-height: 90vh;
+}
+
+.wrapper {
+	width: 100%;
+	padding: 0 2rem;
+	text-align: center;
+}
+.polaroid {
+	background: #fff;
+	padding: 1rem;
+	box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+}
+.polaroid > img {
+	max-width: 100%;
+	height: auto;
+}
+.caption {
+	font-size: 1.2rem;
+	text-align: center;
+	line-height: 2em;
+}
+.desc {
+	font-size: 1rem;
+}
+.item {
+	width: 30%;
+	display: inline-block;
+	margin-top: 2rem;
+	filter: grayscale(100%);
+}
+.item .polaroid:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.35s;
+}
+.item:nth-of-type(4n + 1) {
+	transform: scale(0.8, 0.8) rotate(5deg);
+	transition: all 0.35s;
+}
+.item:nth-of-type(4n + 1) .polaroid:before {
+	transform: rotate(6deg);
+	height: 20%;
+	width: 47%;
+	bottom: 30px;
+	right: 12px;
+	box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.item:nth-of-type(4n + 2) {
+	transform: scale(0.8, 0.8) rotate(-5deg);
+	transition: all 0.35s;
+}
+.item:nth-of-type(4n + 2) .polaroid:before {
+	transform: rotate(-6deg);
+	height: 20%;
+	width: 47%;
+	bottom: 30px;
+	left: 12px;
+	box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.4);
+}
+.item:nth-of-type(4n + 4) {
+	transform: scale(0.8, 0.8) rotate(3deg);
+	transition: all 0.35s;
+}
+.item:nth-of-type(4n + 4) .polaroid:before {
+	transform: rotate(4deg);
+	height: 20%;
+	width: 47%;
+	bottom: 30px;
+	right: 12px;
+	box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.item:nth-of-type(4n + 3) {
+	transform: scale(0.8, 0.8) rotate(-3deg);
+	transition: all 0.35s;
+}
+.item:nth-of-type(4n + 3) .polaroid:before {
+	transform: rotate(-4deg);
+	height: 20%;
+	width: 47%;
+	bottom: 30px;
+	left: 12px;
+	box-shadow: 0 2.1rem 2rem rgba(0, 0, 0, 0.3);
+}
+.item:hover {
+	filter: none;
+	transform: scale(1, 1) rotate(0deg) !important;
+	transition: all 0.35s;
+}
+.item:hover .polaroid:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transform: rotate(0deg);
+	height: 90%;
+	width: 90%;
+	bottom: 0%;
+	right: 5%;
+	box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+	transition: all 0.35s;
+}
 /* Contact Me */
 
 .form {
-	width: 80%;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+	border: 0px solid black;
+	width: 30rem;
+	padding: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
