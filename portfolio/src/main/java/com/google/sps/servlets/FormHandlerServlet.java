@@ -5,7 +5,6 @@ import com.google.gson.Gson;
  
 import java.io.FileWriter;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import org.json.simple.parser.JSONParser;

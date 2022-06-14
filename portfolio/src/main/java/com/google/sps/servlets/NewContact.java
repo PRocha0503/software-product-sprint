@@ -29,27 +29,30 @@ public class NewContact extends HttpServlet {
     String email = Jsoup.clean(request.getParameter("email"), Safelist.none());
     String reason = Jsoup.clean(request.getParameter("reason"), Safelist.none());
     String recruiter = request.getParameter("recruiter");
+    Boolean isRec;
     //Check for nullity in rec
     if(recruiter == null) {
-        recruiter = "null";
+      isRec = false;
     }else{
-        recruiter = "true";
+      isRec =true;
     }
     long timestamp = System.currentTimeMillis();
 
+    //  Connect to datastore
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    //crate new entity
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
     FullEntity contactEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("name",name)
             .set("email", email)
             .set("reason", reason)
-            .set("recruiter", recruiter)
+            .set("recruiter", isRec)
             .set("active",true)
             .set("timestamp", timestamp)
             .build();
+    // Pubish
     datastore.put(contactEntity);
-
     response.sendRedirect("/");
   }
 }
