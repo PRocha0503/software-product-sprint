@@ -1,13 +1,7 @@
 package com.google.sps.servlets;
 
-import com.google.sps.data.ContactMe;
-
-import com.google.cloud.datastore.Datastore;
-import com.google.cloud.datastore.DatastoreOptions;
-import com.google.cloud.datastore.Entity;
-import com.google.cloud.datastore.FullEntity;
-import com.google.cloud.datastore.KeyFactory;
 import java.io.IOException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +11,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.safety.Safelist;
 // import org.jsoup.Jsoup;
 // import org.jsoup.safety.Whitelist;
+
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.FullEntity;
+import com.google.cloud.datastore.KeyFactory;
 
 /** Servlet responsible for creating new tasks. */
 @WebServlet("/newContact")
@@ -28,17 +28,13 @@ public class NewContact extends HttpServlet {
     String name = Jsoup.clean(request.getParameter("name"), Safelist.none());
     String email = Jsoup.clean(request.getParameter("email"), Safelist.none());
     String reason = Jsoup.clean(request.getParameter("reason"), Safelist.none());
-    String recruiter = Jsoup.clean(request.getParameter("recruiter"), Safelist.none());
-
+    String recruiter = request.getParameter("recruiter");
     //Check for nullity in rec
     if(recruiter == null) {
-        recruiter = "false";
+        recruiter = "null";
     }else{
         recruiter = "true";
     }
-
-    // Convert the server stats to JSON
-    // ContactMe contactMe = new ContactMe(name, email, reason, recruiter);
     long timestamp = System.currentTimeMillis();
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
