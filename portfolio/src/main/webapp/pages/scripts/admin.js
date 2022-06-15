@@ -2,7 +2,7 @@ const main = () => {
 	addRows();
 };
 
-const addRows = () => {
+const addRows = async() => {
 	const response = await fetch("/getContacts");
 	const json = await response.text();
 	const contacts = JSON.parse(json);
