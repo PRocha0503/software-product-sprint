@@ -37,7 +37,9 @@ public class GetContact extends HttpServlet {
       String email = entity.getString("email");
       String reason = entity.getString("reason");
       Boolean recruiter = entity.getBoolean("recruiter");
-      ContactMe contact = new ContactMe(name, email, reason, recruiter);
+      Boolean active = entity.getBoolean("active");
+      long timestamp = entity.getLong("timestamp");
+      ContactMe contact = new ContactMe(name, email, reason, recruiter,active,timestamp);
       contacts.add(contact);
     }
 

@@ -29,6 +29,7 @@ public class FormHandlerServlet extends HttpServlet {
     String email = request.getParameter("email");
     String reason = request.getParameter("reason");
     String recruiter = request.getParameter("recruiter");
+    long timestamp = System.currentTimeMillis();
 
     //Check for nullity in rec
     if(recruiter == null) {
@@ -36,7 +37,7 @@ public class FormHandlerServlet extends HttpServlet {
     }
 
     // Convert the server stats to JSON
-    ContactMe contactMe = new ContactMe(name, email, reason, recruiter);
+    ContactMe contactMe = new ContactMe(name, email, reason, recruiter,true,timestamp);
     String jsonContactMe = convertToJson(contactMe);
     System.out.println(jsonContactMe);
 

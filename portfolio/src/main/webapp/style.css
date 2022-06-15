@@ -37,7 +37,7 @@ span {
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	font-size: 4rem;
+	font-size: clamp(0.5rem, 2vw + 1.4rem, 4rem);
 	color: #474554;
 	text-shadow: 8px 8px 20px #808080, -8px -8px 20px #ffffff;
 }
@@ -94,7 +94,7 @@ textarea {
 }
 #navbar p {
 	font-weight: 200;
-	font-size: clamp(0.5rem, 0.7vw + 0.5rem, 1.6rem);
+	font-size: clamp(1.1rem, 2vw + 2rem, 1rem);
 	color: black;
 }
 /* Usefull content for all sections */
