@@ -3,27 +3,27 @@ const main = () => {
 };
 
 const addRows = async () => {
-	const response = await fetch("/getContacts");
-	const json = await response.text();
-	const contacts = JSON.parse(json);
-	// const contacts = [
-	// 	{
-	// 		name: "Test",
-	// 		email: "test@example.com",
-	// 		reason: "TEST",
-	// 		recruiter: false,
-	// 		active: true,
-	// 		time: "1213213",
-	// 	},
-	// 	{
-	// 		name: "Test",
-	// 		email: "test@example.com",
-	// 		reason: "TEST",
-	// 		recruiter: false,
-	// 		active: true,
-	// 		time: "1213213",
-	// 	},
-	// ];
+	// const response = await fetch("/getContacts");
+	// const json = await response.text();
+	// const contacts = JSON.parse(json);
+	const contacts = [
+		{
+			name: "Test",
+			email: "test@example.com",
+			reason: "TEST",
+			recruiter: false,
+			active: true,
+			time: "1213213",
+		},
+		{
+			name: "Test",
+			email: "test@example.com",
+			reason: "TEST",
+			recruiter: false,
+			active: true,
+			time: "1213213",
+		},
+	];
 	let table = document.getElementById("contactsTable");
 	contacts.map((ob, i) => {
 		let row = table.insertRow(i + 1);
@@ -37,13 +37,13 @@ const addRows = async () => {
 		btn.className = "btn";
 		btn.value = "ss";
 		btn.onclick = (function () {
-			return function async() {
-				try{
+			return async () => {
+				try {
 					await fetch(`/deleteContact?email:${ob["email"]}`, {
 						method: "DELETE",
 					});
-				}catch(e){
-					console.log(e)
+				} catch (e) {
+					console.log(e);
 				}
 			};
 		})();
