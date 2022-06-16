@@ -35,31 +35,28 @@ public class DeleteContact extends HttpServlet {
   public void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
     //Get email to delete
     String email = request.getParameter("email");
-    response.setContentType("text/plain;");
-    response.getWriter().println(email);
+    // response.setContentType("text/plain;");
+    // response.getWriter().println(email);
 
-    // // Initialize datastore
-    // Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    // // KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
-    // // Key taskEntityKey = keyFactory.newKey(id);
-    // // datastore.delete(taskEntityKey);
-    // String entityName = "Contacts";
-    // String gql = "SELECT * FROM "+entityName +" WHERE email= "+email+"";
-
-
-    // Query<Entity> query = Query.newGqlQueryBuilder(Query.ResultType.ENTITY, gql)
-    //         .setAllowLiteral(true).build();
-    // try{
-    //     QueryResults<Entity> results = datastore.run(query);           
-    //     if (results.hasNext()) {
-    //         Entity rs = results.next();             
-    //         datastore.delete(rs.getKey());
-    //         return ;
-    //     }
-    //     return ;
-    // }catch(Exception e){
-    //     System.out.println(e);
-    //     return ;
-    // }
+    // Initialize datastore
+    try{
+      Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+      // KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
+      // Key taskEntityKey = keyFactory.newKey(id);
+      // datastore.delete(taskEntityKey);
+      String entityName = "Contacts";
+      String gql = "SELECT * FROM "+entityName +" WHERE email= "+email+"";
+      Query<Entity> query = Query.newGqlQueryBuilder(Query.ResultType.ENTITY, gql).setAllowLiteral(true).build();
+      QueryResults<Entity> results = datastore.run(query);           
+      if (results.hasNext()) {
+        Entity rs = results.next();             
+        datastore.delete(rs.getKey());
+        return ;
+      }
+      return ;
+    }catch(Exception e){
+      System.out.println(e);
+      return ;
+    }
   }
 }
