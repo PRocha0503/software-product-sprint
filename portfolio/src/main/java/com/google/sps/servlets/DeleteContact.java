@@ -36,7 +36,8 @@ public class DeleteContact extends HttpServlet {
       KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
       Key contact = keyFactory.newKey(id);
       datastore.delete(contact);
-      return ;
+      response.setContentType("text/plain;");
+      response.getWriter().println("DELETED");
     }catch(Exception e){
       System.out.println(e);
       response.setContentType("text/plain;");
