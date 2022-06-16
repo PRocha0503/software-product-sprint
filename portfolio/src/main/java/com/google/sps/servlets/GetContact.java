@@ -33,13 +33,14 @@ public class GetContact extends HttpServlet {
     List<ContactMe> contacts = new ArrayList<>();
     while (results.hasNext()) {
       Entity entity = results.next();
+      long id = entity.getKey().getId();
       String name = entity.getString("name");
       String email = entity.getString("email");
       String reason = entity.getString("reason");
       Boolean recruiter = entity.getBoolean("recruiter");
       Boolean active = entity.getBoolean("active");
       long timestamp = entity.getLong("timestamp");
-      ContactMe contact = new ContactMe(name, email, reason, recruiter,active,timestamp);
+      ContactMe contact = new ContactMe(id,name, email, reason, recruiter,active,timestamp);
       contacts.add(contact);
     }
 
