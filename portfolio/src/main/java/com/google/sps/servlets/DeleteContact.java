@@ -51,8 +51,10 @@ public class DeleteContact extends HttpServlet {
         Entity rs = results.next();             
         datastore.delete(rs.getKey());
         return ;
+      }else{
+        response.setContentType("text/plain;");
+        response.getWriter().println(results.toString());
       }
-      return ;
     }catch(Exception e){
       System.out.println(e);
       response.setContentType("text/plain;");
