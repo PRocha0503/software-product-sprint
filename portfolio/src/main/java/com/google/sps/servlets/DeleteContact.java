@@ -23,9 +23,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.google.cloud.datastore.Entity;
-import com.google.cloud.datastore.Query;
-import com.google.cloud.datastore.QueryResults;
 
 /** Servlet responsible for deleting tasks. */
 @WebServlet("/deleteContact")
@@ -33,28 +30,13 @@ public class DeleteContact extends HttpServlet {
 
   @Override
   public void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    //Get email to delete
-    String email = request.getParameter("email");
-    
-
-    // Initialize datastore
     try{
+      long id = Long.parseLong(request.getParameter("id"));
       Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-      // KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
-      // Key taskEntityKey = keyFactory.newKey(id);
-      // datastore.delete(taskEntityKey);
-      String entityName = "Contacts";
-      String gql = "SELECT * FROM "+entityName +" WHERE email= "+email+"";
-      Query<Entity> query = Query.newGqlQueryBuilder(Query.ResultType.ENTITY, gql).setAllowLiteral(true).build();
-      QueryResults<Entity> results = datastore.run(query);           
-      if (results.hasNext()) {
-        Entity rs = results.next();             
-        datastore.delete(rs.getKey());
-        return ;
-      }else{
-        response.setContentType("text/plain;");
-        response.getWriter().println(results.toString());
-      }
+      KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
+      Key contact = keyFactory.newKey(id);
+      datastore.delete(contact);
+      return ;
     }catch(Exception e){
       System.out.println(e);
       response.setContentType("text/plain;");

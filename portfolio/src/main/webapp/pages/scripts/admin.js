@@ -39,7 +39,8 @@ const addRows = async () => {
 		btn.onclick = (function () {
 			return async () => {
 				try {
-					await fetch(`/deleteContact?email:${ob["email"]}`, {
+					console.log(`/deleteContact?id:${ob["id"]}`);
+					await fetch(`/deleteContact?id:${ob["id"]}`, {
 						method: "DELETE",
 					});
 				} catch (e) {
