@@ -37,9 +37,8 @@ const addRows = async () => {
 		btn.className = "btn";
 		btn.value = "ss";
 		btn.onclick = (function () {
-			return function () {
+			return function async() {
 				try{
-
 					await fetch(`/deleteContact?email:${ob["email"]}`, {
 						method: "DELETE",
 					});
