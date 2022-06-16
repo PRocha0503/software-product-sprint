@@ -35,8 +35,7 @@ public class DeleteContact extends HttpServlet {
   public void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
     //Get email to delete
     String email = request.getParameter("email");
-    // response.setContentType("text/plain;");
-    // response.getWriter().println(email);
+    
 
     // Initialize datastore
     try{
@@ -56,7 +55,8 @@ public class DeleteContact extends HttpServlet {
       return ;
     }catch(Exception e){
       System.out.println(e);
-      return ;
+      response.setContentType("text/plain;");
+      response.getWriter().println(e);
     }
   }
 }
