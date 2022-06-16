@@ -31,7 +31,7 @@ const addRows = async () => {
 			let cel = row.insertCell(index);
 			cel.innerHTML = ob[key];
 		});
-		let cel = row.insertCell(6);
+		let cel = row.insertCell(7);
 		var btn = document.createElement("input");
 		btn.type = "button";
 		btn.className = "btn";
