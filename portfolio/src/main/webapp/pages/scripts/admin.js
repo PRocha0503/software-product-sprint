@@ -3,9 +3,9 @@ const main = () => {
 };
 
 const addRows = async () => {
-	const response = await fetch("/getContacts");
-	const json = await response.text();
-	const contacts = JSON.parse(json);
+	let response = await fetch("/getContacts");
+	let json = await response.text();
+	let contacts = JSON.parse(json);
 	// const contacts = [
 	// 	{
 	// 		name: "Test",
@@ -14,6 +14,7 @@ const addRows = async () => {
 	// 		recruiter: false,
 	// 		active: true,
 	// 		time: "1213213",
+	// 		id: 12321,
 	// 	},
 	// 	{
 	// 		name: "Test",
@@ -22,6 +23,7 @@ const addRows = async () => {
 	// 		recruiter: false,
 	// 		active: true,
 	// 		time: "1213213",
+	// 		id: 12321,
 	// 	},
 	// ];
 	let table = document.getElementById("contactsTable");
@@ -34,8 +36,8 @@ const addRows = async () => {
 		let cel = row.insertCell(7);
 		var btn = document.createElement("input");
 		btn.type = "button";
-		btn.className = "btn";
-		btn.value = "ss";
+		btn.className = "deleteBtn";
+		btn.value = "❌";
 		btn.onclick = (function () {
 			return async () => {
 				try {
