@@ -38,10 +38,14 @@ const addRows = async () => {
 		btn.value = "ss";
 		btn.onclick = (function () {
 			return function () {
-				fetch(`/deleteContact?email:${ob["email"]}`, {
-					method: "DELETE",
-				});
-				console.log(`/deleteContact?email:${ob["email"]}`);
+				try{
+
+					await fetch(`/deleteContact?email:${ob["email"]}`, {
+						method: "DELETE",
+					});
+				}catch(e){
+					console.log(e)
+				}
 			};
 		})();
 		cel.appendChild(btn);
