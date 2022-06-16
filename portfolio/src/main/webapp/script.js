@@ -3,15 +3,14 @@
  */
 const getRandomFact = async () => {
 	const serverFunFact = await fetch("/funFact");
-	const textFunFact = await serverFunFact.text()
-    // Add it to the page.
+	const textFunFact = await serverFunFact.text();
+	// Add it to the page.
 	const funFactContainer = document.getElementById("name");
 	funFactContainer.innerText = textFunFact;
 	//Make animation happen again
 	funFactContainer.style.animation = "none";
 	funFactContainer.offsetHeight;
 	funFactContainer.style.animation = null;
-
 };
 
 /**
@@ -20,4 +19,14 @@ const getRandomFact = async () => {
 
 const navigate = (url) => {
 	window.location.href = url;
+};
+
+/**
+ * Get all contacts lists
+ */
+const getContacts = async () => {
+	const response = await fetch("/getContacts");
+	const json = await response.text();
+	const contacts = JSON.parse(json);
+	console.log(contacts);
 };

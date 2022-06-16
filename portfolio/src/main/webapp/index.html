@@ -47,7 +47,7 @@
 		</div>
 		<!-- About me section -->
 		<div id="aboutMe">
-			<h1 class="linkTitle"><span contenteditable="true">-About Me</span></h1>
+			<h1 class="linkTitle"><span >-About Me</span></h1>
 			<div id="quoteContainer">
 				<img src="./assets/quote.svg" class="quoteIcon" />
 				<div>
@@ -70,7 +70,7 @@
 		<!-- Just a divider  -->
 		<div class="divider"></div>
 		<div id="educationSection">
-			<h1 class="linkTitle" ><span contenteditable="true" id="edTitle">-Education</span></h1>
+			<h1 class="linkTitle" ><span  id="edTitle">-Education</span></h1>
 			<div class="root">
 				<div id="educationGrid">
 					<div class="educationItem" id="tomasMoro">
@@ -105,7 +105,7 @@
 		<!-- Proyects Section -->
 		<div class="divider"></div>
 		<div id="proyectsSection">
-			<h1 class="linkTitle" ><span contenteditable="true" >-Proyects</span></h1>
+			<h1 class="linkTitle" ><span  >-Proyects</span></h1>
 			<div class="root">
 				<div class="item">
 					<div class="polaroid"><img src="./assets/Tegger.png">
@@ -145,7 +145,7 @@
 
 		<!-- Contact Me section -->
 		<div class="divider"></div>
-		<h1 class="linkTitle" id="contactMe"><span contenteditable="true">-Contact Me</span></h1>
+		<h1 class="linkTitle" id="contactMe"><span >-Contact Me</span></h1>
 		<div class="root">
 			<p style="color: black">
 				If you are want to contact me please leave your email and reason here
@@ -165,7 +165,7 @@
 				
 			</div>
 			<div class="form">
-				<form action="/form-handler" method="POST">
+				<form action="/newContact" method="POST">
 					<label for="fname">Name</label><br>
 					<input type="text" id="fname" name="name"></input><br />
 					<label for="femail" >Email</label><br>
@@ -177,6 +177,9 @@
 					<input type="submit" />
 				</form>
 			</div>
+			<button id="feelingLucky"onclick="getContacts()">
+				Get Contacts
+			</button>
 		</div>
 	</body>
 </html>

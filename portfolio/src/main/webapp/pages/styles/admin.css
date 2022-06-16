@@ -1,0 +1,17 @@
+table {
+	width: 100%;
+
+	background: white;
+	border-radius: 20px;
+}
+th {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background: rgb(236, 143, 143);
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+td {
+	padding: 10px;
+}
