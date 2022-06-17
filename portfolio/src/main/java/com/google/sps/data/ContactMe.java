@@ -9,26 +9,15 @@ public final class ContactMe {
   private final boolean recruiter;
   private final boolean active;
   private final long timestamp;
-
-
-  public ContactMe(String name, String email, String reason, String recruiter,boolean active, long timestamp) {
-    this.name = name;
-    this.email = email;
-    this.reason = reason;
-    if (recruiter.equals("on")) {
-        this.recruiter = true;
-      }else {
-        this.recruiter = false;   
-      }
-    this.active = active;
-    this.timestamp = timestamp;
-  }
-  public ContactMe(String name, String email, String reason, Boolean recruiter,boolean active, long timestamp) {
+  private final long id;
+  
+  public ContactMe(long id,String name, String email, String reason, Boolean recruiter,boolean active, long timestamp) {
     this.name = name;
     this.email = email;
     this.reason = reason;
     this.recruiter = recruiter;
     this.active = active;
     this.timestamp = timestamp;
+    this.id = id;
   }
 }
