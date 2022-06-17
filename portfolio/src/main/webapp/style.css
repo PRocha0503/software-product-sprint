@@ -6,7 +6,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background: #e0e0e0;
+	background: #e6e7ee;
 	padding: 0px;
 	margin: 0px;
 }
@@ -47,11 +47,11 @@ label {
 }
 input[type="text"] {
 	border-radius: 10px;
-	border: 0.5px solid gray;
+	border: 0px solid gray;
 	width: 100%;
 	min-height: 2rem;
-	background: linear-gradient(145deg, #cacaca, #f0f0f0);
-	box-shadow: 5px 5px 10px #7d7d7d, -5px -5px 10px #ffffff;
+	background: linear-gradient(145deg, #cfd0d6, #f6f7ff);
+	box-shadow: 5px 5px 9px #939498, -5px -5px 9px #ffffff;
 }
 input[type="checkbox"] {
 	margin: auto;
@@ -60,8 +60,9 @@ input[type="checkbox"] {
 	border: 1px solid #ddd;
 }
 input[type="submit"] {
-	background: white;
-	box-shadow: 20px 20px 60px #949494, -20px -20px 60px #ffffff;
+	background: #e6e7ee;
+	box-shadow: 20px 20px 82px #757679, -20px -20px 82px #ffffff;
+
 	border: 0px solid black;
 	margin: auto;
 	border-radius: 20px;
@@ -76,9 +77,10 @@ form {
 }
 textarea {
 	border-radius: 10px;
+	border: 0px solid black;
 	min-height: 8rem;
-	background: linear-gradient(145deg, #cacaca, #f0f0f0);
-	box-shadow: 5px 5px 10px #7d7d7d, -5px -5px 10px #ffffff;
+	background: linear-gradient(145deg, #cfd0d6, #f6f7ff);
+	box-shadow: 5px 5px 9px #939498, -5px -5px 9px #ffffff;
 }
 /* Navbar */
 
@@ -145,8 +147,8 @@ textarea {
 	border: 1px solid black;
 	height: 10vh;
 	border-radius: 101px;
-	background: linear-gradient(145deg, #f0f0f0, #cacaca);
-	box-shadow: 20px 20px 39px #bebebe, -20px -20px 39px #ffffff;
+	background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+	box-shadow: 20px 20px 60px #a6a6ab, -20px -20px 60px #ffffff;
 	display: flex;
 	align-items: center;
 	padding-left: 40px;
@@ -187,8 +189,8 @@ textarea {
 	padding: 1rem;
 	border-radius: 5px;
 	border: 0px solid black;
-	background: linear-gradient(145deg, #cacaca, #f0f0f0);
-	box-shadow: 20px 20px 39px #bebebe, -20px -20px 39px #ffffff;
+	background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+	box-shadow: 20px 20px 60px #a6a6ab, -20px -20px 60px #ffffff;
 }
 
 #feelingLucky:hover {
@@ -256,8 +258,8 @@ mark:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(145deg, #cacaca, #f0f0f0);
-	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+	background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+	box-shadow: 20px 20px 60px #afb0b5, -20px -20px 60px #ffffff;
 }
 
 .shaded {
@@ -277,23 +279,23 @@ mark:hover {
 #tomasMoro {
 }
 #tomasMoro:hover {
-	background: linear-gradient(145deg, #f0f0f0, #cacaca);
-	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+	background: linear-gradient(145deg, #cfd0d6, #f6f7ff);
+	box-shadow: 20px 20px 60px #afb0b5, -20px -20px 60px #ffffff;
 }
 #tec {
 	position: relative;
-	background: linear-gradient(145deg, #f0f0f0, #cacaca);
-	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+	background: linear-gradient(145deg, #cfd0d6, #f6f7ff);
+	box-shadow: 20px 20px 60px #afb0b5, -20px -20px 60px #ffffff;
 }
 #tec:hover {
-	background: linear-gradient(145deg, #cacaca, #f0f0f0);
-	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+	background: linear-gradient(145deg, #f6f7ff, #cfd0d6);
+	box-shadow: 20px 20px 60px #afb0b5, -20px -20px 60px #ffffff;
 }
 #online {
 }
 #online:hover {
-	background: linear-gradient(145deg, #f0f0f0, #cacaca);
-	box-shadow: 17px 17px 34px #808080, -17px -17px 34px #ffffff;
+	background: linear-gradient(145deg, #cfd0d6, #f6f7ff);
+	box-shadow: 20px 20px 60px #afb0b5, -20px -20px 60px #ffffff;
 }
 
 .educationImg {
@@ -410,7 +412,7 @@ mark:hover {
 /* Contact Me */
 
 .form {
-	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+	box-shadow: 14px 14px 67px #8a8b8f, -14px -14px 67px #ffffff;
 	border: 0px solid black;
 	width: 30rem;
 	padding: 2rem;
